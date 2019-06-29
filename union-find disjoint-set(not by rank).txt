@@ -1,0 +1,14 @@
+#define REP(i,a,b) for(int i=int(a);i<=int(b);i++)
+
+typedef long long ll;
+typedef long double ld;
+typedef pair<int,int> ii;
+typedef vector<ii> vii;
+
+vector<int> pset(1000);//number of elements
+void initSet(int _size) { pset.resize(_size); REP(i, 0, _size-1) pset[i] = i; }
+int findSet(int i) { return (pset[i] == i) ? i : (pset[i] = findSet(pset[i])); } //findSet also does path compression aka- sets pset[] correctly when possible
+void unionSet(int i, int j) { pset[findSet(i)] = findSet(j); } //make parent as same
+bool isSame(int i, int j) { return findSet(i) == findSet(j); }
+//connected components new unuio
+void un(int i,int j){int x=findSet(i);int y=findSet(j); if(x==y) return else{pset[x]=y; size--;/*init size to max*/}}

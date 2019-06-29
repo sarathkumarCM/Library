@@ -1,0 +1,76 @@
+//segtree sum
+typedef vector<int> vi;
+
+vi segment_tree;
+void init_segment(int N) {segment_tree.resize(4 * N, 0);}
+void build_seg_tree(int A[], int node, int b, int e) {
+	if (b == e) {
+		segment_tree[node] = A[b];
+	}
+	else {
+		build_seg_tree(A, node * 2, b, (b + e) / 2);
+		build_seg_tree(A, node * 2 + 1, (b + e) / 2 + 1, e);
+		segment_tree[node] = segment_tree[node * 2] + segment_tree[node * 2 + 1];
+	}
+}
+int query(int node, int b, int e, int i, int j) {
+	if (b > e)
+		return 0;
+	if (b >= i&&e <= j) {
+		return segment_tree[node];
+	}
+	if (b == e)
+		return 0;
+	int m = (b + e) / 2;
+	return query(node * 2, b, m, i, j)+query(node * 2 + 1, m + 1, e, i, j);
+}
+void update(int node, int b, int e, int newIndx, int newVal) {
+	if (b == e)
+		segment_tree[node] = newVal;
+	else {
+		if ((b + e) / 2 < newIndx)
+			update(node * 2, b, (b + e) / 2, newIndx, newVal);
+		else
+			update(node * 2 + 1, (b + e) / 2 + 1, e, newIndx, newVal);
+		segment_tree[node] = segment_tree[node * 2] + segment_tree[node * 2 + 1];
+	}
+}
+//class seg tree min
+class SegmentTree {
+	private: vi A, st;
+			 int n;
+			 int left(int p) { return (p << 1); }
+			 int right(int p) { return (p << 1) + 1; }
+
+			 void build(int p, int l, int r) {
+				 if (l == r) st[p] = l;
+				 else {
+					 build(left(p), l, (l + r) / 2);
+					 build(right(p), (l + r) / 2 + 1, r);
+					 int p1 = st[left(p)], p2 = st[right(p)];
+					 st[p] = (A[p1] > A[p2]) ? p2 : p1;
+				 }
+			 }
+			 int query(int p, int l, int r, int i, int j) {
+				 if (i > r || j < l) return -1;
+				 if (l >= i &&r <= j) return st[p];
+				 int p1 = query(left(p), l, (l + r) / 2, i, j);
+				 int p2 = query(right(p), (l + r) / 2 + 1, r, i, j);
+				 if (p1 == -1)return p2;
+				 if (p2 == -1)return p1;
+				 return (A[p2] < A[p1] ? p2 : p1);
+
+			 }
+	public:
+		SegmentTree(const vi &_A) {
+			A = _A;
+			n = (int)A.size();
+			st.resize( 4 * n, 0);//or assign
+			build(1, 0, n - 1);
+
+		}
+		int query(int i, int j) {
+			return query(1, 0, n-1, i, j);
+		}
+
+};

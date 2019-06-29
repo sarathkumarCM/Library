@@ -1,0 +1,15 @@
+#define REP(i,a,b) for(int i=int(a);i<=int(b);i++)
+
+typedef long long ll;
+typedef long double ld;
+typedef pair<int,int> ii;
+typedef vector<ii> vii;
+
+vector<int> pset(1000);//number of elements
+vector<int> rnk(1000); //stores rank (max depth) of each nodes
+void initSet(int _size) { pset.resize(_size); REP(i, 0, _size-1) pset[i] = i,rnk[i]=0; }
+int findSet(int i) { return (pset[i] == i) ? i : (pset[i] = findSet(pset[i])); } //findSet also does path compression aka- sets pset[] correctly when possible
+void unionSet(int i, int j) { int a = findSet(i), b = findSet(j); if (a != b) { if (rnk[a] < rnk[b])swap(a, b); pset[b] = a; if (rnk[a] == rnk[b])rnk[a]++; } } //make parent as same
+bool isSame(int i, int j) { return findSet(i) == findSet(j); }
+int numberOfSets(){}
+int sizeOfSet(int i) { int _size = pset.size(); int count = 0; REP(i, 0, _size - 1) if (pset[i] == i) count++; return count; }
