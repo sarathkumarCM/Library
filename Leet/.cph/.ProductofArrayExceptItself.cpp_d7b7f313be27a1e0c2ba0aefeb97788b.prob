@@ -1,0 +1,1 @@
+{"name":"Local: ProductofArrayExceptItself","url":"/Users/scm/Repos/cp/Mine/Leet/ProductofArrayExceptItself.cpp","tests":[{"id":1738168080609,"input":"0","output":"24 12 8 6\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/scm/Repos/cp/Mine/Leet/ProductofArrayExceptItself.cpp","group":"local","local":true}

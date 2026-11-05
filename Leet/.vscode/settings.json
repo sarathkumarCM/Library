@@ -1,0 +1,4 @@
+{
+    "tts.runner": "podman run --rm --entrypoint /opt/tts/scripts/TTRegression.ksh -v $(pwd):/test_suite --user 0 dockerhub.rnd.amadeus.net/docker-production-virt/tts/ttserver:4.9.11 -r /test_suite",
+    "python.languageServer": "Pylance"
+}

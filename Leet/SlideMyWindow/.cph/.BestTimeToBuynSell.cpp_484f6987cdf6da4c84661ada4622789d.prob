@@ -1,0 +1,1 @@
+{"name":"Local: BestTimeToBuynSell","url":"/Users/scm/Repos/cp/Mine/Leet/SlideMyWindow/BestTimeToBuynSell.cpp","tests":[{"id":1743438973992,"input":"6\n7 1 5 3 6 4","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/scm/Repos/cp/Mine/Leet/SlideMyWindow/BestTimeToBuynSell.cpp","group":"local","local":true}

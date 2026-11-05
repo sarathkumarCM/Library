@@ -1,0 +1,1 @@
+{"name":"Local: ReverseLL206","url":"/Users/scm/Repos/cp/Mine/Leet/LinkedList/ReverseLL206.cpp","tests":[{"id":1774092419230,"input":"5\n1 2 3 4 5","output":"54321"},{"id":1774094245311,"input":"4\n1 2 3 4","output":"4321"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/scm/Repos/cp/Mine/Leet/LinkedList/ReverseLL206.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: patternRegex","url":"/Users/scm/Repos/cp/Mine/Leet/patternRegex.cpp","tests":[{"id":1738232271825,"input":"aa\na","output":"0\n"},{"id":1738232302026,"input":"aa\na*","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/scm/Repos/cp/Mine/Leet/patternRegex.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: meetingRooms","url":"/Users/scm/Repos/cp/Mine/Leet/Intervals/meetingRooms.cpp","tests":[{"id":1778080808551,"input":"3\n0 30 5 10 15 20","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/scm/Repos/cp/Mine/Leet/Intervals/meetingRooms.cpp","group":"local","local":true}

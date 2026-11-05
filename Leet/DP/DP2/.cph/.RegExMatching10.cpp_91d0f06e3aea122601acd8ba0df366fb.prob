@@ -1,0 +1,1 @@
+{"name":"Local: RegExMatching10","url":"/Users/scm/Repos/cp/Mine/Leet/DP/DP2/RegExMatching10.cpp","tests":[{"id":1779474885404,"input":"aa a","output":"0"},{"id":1779474899226,"input":"aa a*","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/scm/Repos/cp/Mine/Leet/DP/DP2/RegExMatching10.cpp","group":"local","local":true}

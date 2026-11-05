@@ -1,0 +1,1 @@
+{"name":"Local: string-encode-and-decode","url":"/Users/scm/Repos/cp/Mine/Leet/string-encode-and-decode.cpp","tests":[{"id":1739701049692,"input":"4\nneet\ncode\nlove\nyou","output":"neet\ncode\nlove\nyou"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/scm/Repos/cp/Mine/Leet/string-encode-and-decode.cpp","group":"local","local":true}
